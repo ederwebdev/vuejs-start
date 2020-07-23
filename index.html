@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starting with VUEJS</title>
+
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <div id="app"> 
+        <p>{{ msg }}</p> 
+        <p>{{ ehVerdade ? 'Verdade' : 'Falso' }}</p>
+        <p>{{ frutas[0] + 'com' + frutas[1] }}</p>
+        <p>{{ aluno.nome }}</p>   
+        <p>{{ numero }}</p>
+        <p>{{ fun() }}</p>
+    </div>    
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                msg: 'Ola',                                //string
+                ehVerdade: true,                           //booleano
+                frutas: ['Abacate ', ' Banana', ' Manga'] ,//array
+                aluno: {                                   //objeto aluno
+                    nome: 'EderOli'                        //inteiro
+                },
+                numero: 7,                                 //função q retorna string
+                fun: () => {
+                    return 'Function mensage return'
+                }
+            }
+        })
+    </script>
     
 </body>
 </html>
